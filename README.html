@@ -19,12 +19,11 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/navigation-1.1/tabsets.js"></script>
+<link href="site_libs/highlightjs-1.1/textmate.css" rel="stylesheet" />
+<script src="site_libs/highlightjs-1.1/highlight.js"></script>
 
 <style type="text/css">code{white-space: pre;}</style>
-<link rel="stylesheet"
-      href="site_libs/highlight/textmate.css"
-      type="text/css" />
-<script src="site_libs/highlight/highlight.js"></script>
 <style type="text/css">
   pre:not([class]) {
     background-color: white;
@@ -151,7 +150,6 @@ $(document).ready(function () {
 <div class="container-fluid main-container">
 
 <!-- tabsets -->
-<script src="site_libs/navigation-1.1/tabsets.js"></script>
 <script>
 $(document).ready(function () {
   window.buildTabsets("TOC");
@@ -207,8 +205,8 @@ $(document).ready(function () {
 
 <div id="rmarkdown-website-tutorial" class="section level1">
 <h1>rmarkdown-website-tutorial</h1>
-<p>A tutorial for creating websites using R Markdown.</p>
-<p>To build the website, run <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html"><code>rmarkdown::render_site()</code></a>, which knits each Rmarkdown (*.Rmd) based on parameters in <code>_site.R</code> and <code>_site.yml</code> before pushing the files back to Github.</p>
+<p><a href="https://jules32.github.io/rmarkdown-website-tutorial/">A tutorial for creating websites using R Markdown</a>.</p>
+<p>To build the website, run <a href="http://rmarkdown.rstudio.com/rmarkdown_websites.html"><code>rmarkdown::render_site()</code></a>, which knits each Rmarkdown (*.Rmd) based on parameters in <code>_site.yml</code> before pushing the files back to Github.</p>
 </div>
 
 
@@ -219,8 +217,11 @@ $(document).ready(function () {
 <script>
 
 // add bootstrap table styles to pandoc tables
-$(document).ready(function () {
+function bootstrapStylePandocTables() {
   $('tr.header').parent('thead').parent('table').addClass('table table-condensed');
+}
+$(document).ready(function () {
+  bootstrapStylePandocTables();
 });
 
 
